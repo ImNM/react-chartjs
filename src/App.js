@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useState } from 'react';
+import './App.css';
+import Rechart from './components/Rechart'
 function App() {
+  const [vieWOption, setvieWOption] = useState(30)
+
+  const onClickYear = () => setvieWOption(30);
+  const onClickMonth = () => setvieWOption(7);
+  const onClickWeek = () => setvieWOption(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Rechart vieWOption = {vieWOption}/>
+      <button onClick ={onClickYear}>일년</button>
+      <button onClick ={onClickMonth}>한달</button> 
+      <button onClick ={onClickWeek}>한주</button>
     </div>
   );
 }
