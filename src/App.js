@@ -1,7 +1,8 @@
 
 import { useState } from 'react';
 import './App.css';
-import Rechart from './components/Rechart'
+import AreaChart from './components/AreaChart'
+import RechartBar from './components/BarChart'
 function App() {
   const [vieWOption, setvieWOption] = useState(30)
 
@@ -11,10 +12,11 @@ function App() {
 
   return (
     <div >
-      <Rechart vieWOption = {vieWOption}/>
+      <AreaChart vieWOption = {vieWOption}/>
       <button onClick ={onClickYear}>일년</button>
       <button onClick ={onClickMonth}>한달</button> 
       <button onClick ={onClickWeek}>한주</button>
+      <RechartBar/>
     </div>
   );
 }

@@ -22,6 +22,10 @@ for(let num = 7; num>= 0; num--){
  }
          
 
+
+
+
+
 function Rechart({vieWOption}) {
    const [viewState, setviewState] = useState(dataMonth)
     useEffect(() => {
@@ -43,7 +47,7 @@ function Rechart({vieWOption}) {
     return (
        
         <div>
-           <ResponsiveContainer width = "100%"  height = {400}>
+           <ResponsiveContainer width = "90%"  height = {400}>
             <AreaChart data ={viewState}>
           
                 <defs>
